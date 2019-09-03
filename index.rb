@@ -2,6 +2,7 @@ require 'net/http'
 require 'json'
 require 'io/console' 
 require 'catpix'
+require 'colorize'
 
 def key_to_continue                                                                                                           
     print "press any key to start!".center(175)                                                                                                 
@@ -33,7 +34,6 @@ def spacing
     puts "\n" *3
 end
 
-
 def gameplay
     correct = false
     q_picker = rand(5)
@@ -55,7 +55,7 @@ def gameplay
         puts "\n"
         answer = gets.to_i
         iteration -=1
-         puts number_of_items
+        #  puts number_of_items
         if iteration ==0
             system("clear")
             spacing
@@ -67,7 +67,6 @@ def gameplay
             puts "too low! Try again!".center(175)
             puts "you have #{iteration} guesses left!".center(175)
             puts "\n"
-            
         elsif answer > number_of_items
             puts "too high! Try again".center(175)
             puts "you have #{iteration} guesses left!".center(175)
@@ -77,17 +76,13 @@ def gameplay
             spacing
             puts "Wow thats right!".center(175)
             correct = true
-           
         else
         puts "That's not a number, try again!".center(175)
         end
     end
 end
 
-
-# Logo will go here to replace the welcome message
 system("clear")
-
 
 Catpix::print_image "./images/bitcoin_to_logo2.jpg",
   :limit_x => 0.75,
@@ -98,9 +93,6 @@ Catpix::print_image "./images/bitcoin_to_logo2.jpg",
   :bg_fill => false,
   :resolution => "high"
 
-  key_to_continue
-
-
-  gameplay
-
+key_to_continue
+gameplay
 play_again

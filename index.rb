@@ -74,12 +74,14 @@ def gameplay
         elsif answer == number_of_items
             system("clear")
             spacing
-            puts "Wow thats right!".center(175)
+            puts "You got it right!!".center(175)
+            puts "\n"
             correct = true
         else
         puts "That's not a number, try again!".center(175)
         end
     end
+    play_again
 end
 
 system("clear")
@@ -95,4 +97,3 @@ Catpix::print_image "./images/bitcoin_to_logo2.jpg",
 
 key_to_continue
 gameplay
-play_again

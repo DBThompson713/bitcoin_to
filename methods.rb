@@ -20,6 +20,10 @@ def play_again
         
     elsif play_again_answer == "no"
         system("clear")
+        puts "\n" *10
+        puts "Your final score is #{$score}".center(175)
+        STDIN.getch 
+        system("clear")
         exit
     else 
         puts "I didn't understand that.".center(175)

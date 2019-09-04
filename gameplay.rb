@@ -26,8 +26,6 @@ def gameplay
         number_of_items = ((blockchain.to_i)/questions[q_picker][1]).round
     
         puts "\n"
-        
-        
 
         p questions[q_picker][0]
         puts "\n"
@@ -52,7 +50,7 @@ def gameplay
             :bg_fill => false,
             :resolution => "high"
             puts "\n"
-            puts "#{answer} is too low! Try again!".center(175)
+            puts ("#{answer}"+" is too low!".colorize(:red) + " Try again!").center(195)
             puts "you have #{iteration} guesses left!".center(175)
             puts "\n"
         elsif answer > number_of_items
@@ -67,7 +65,7 @@ def gameplay
             :resolution => "high"
 
             puts "\n"
-            puts "#{answer} is too high! Try again".center(175)
+            puts ("#{answer}"+" is too high!".colorize(:red) +" Try again").center(195)
             puts "you have #{iteration} guesses left!".center(175)
             puts "\n"
         elsif answer == number_of_items

@@ -17,6 +17,7 @@ def play_again
     
     if play_again_answer == "yes"
         gameplay
+        
     elsif play_again_answer == "no"
         exit
     else 

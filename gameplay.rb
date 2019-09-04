@@ -32,6 +32,7 @@ def gameplay
         number_of_items = ((blockchain.to_i)/questions[q_picker][1]).round
     
         puts "\n"
+        
 
         p questions[q_picker][0]
         puts "\n"
@@ -51,7 +52,7 @@ def gameplay
 
             spacing
             puts "You have no more guesses left".center(175)
-            puts "The correct answer was #{number_of_items}".center(175)
+            puts "The correct answer was #{number_of_items}.".center(175)
             puts "\n"
             puts "Your current score is: #{$score}".center(175)
             puts "\n"
@@ -68,7 +69,7 @@ def gameplay
                 :bg => "black",
                 :bg_fill => false,
                 :resolution => "high"
-                
+
             puts "\n"
             puts ("#{answer}"+" is way too low!".colorize(:red) + " Try again!").center(195)
             puts "You have #{iteration} guesses left!".center(175)

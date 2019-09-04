@@ -3,6 +3,7 @@ require 'json'
 require 'io/console' 
 require 'catpix'
 require 'colorize'
+require_relative './gameplay.rb'
 
 def key_to_continue                                                                                                           
     print "press any key to start!".center(175)                                                                                                 
@@ -23,6 +24,7 @@ def play_again
     
     if play_again_answer == "yes"
         gameplay
+        
     elsif play_again_answer == "no"
         exit
     else 
@@ -34,55 +36,55 @@ def spacing
     puts "\n" *3
 end
 
-def gameplay
-    correct = false
-    q_picker = rand(5)
-    iteration = 7
-    questions = [
-    ["How many bigmacs can you buy with 1 bitcoin?".center(175)     , 5.5],
-    ["How many 2004 Holden Commodores can you buy with 1 btc?".center(175)     , 4500],
-    ["How many pets goats could you buy with 1 bitcoin?".center(175)     , 180],
-    ["How many packets of Tim Tams could you buy with 1 bitcoin".center(175)     , 3.65],
-    ["How many Nintendo Switches can you buy with 1 bitcoin".center(175)     , 399 ]
-    ]
+# def gameplay
+#     correct = false
+#     q_picker = rand(5)
+#     iteration = 7
+#     questions = [
+#     ["How many bigmacs can you buy with 1 bitcoin?".center(175)     , 5.5],
+#     ["How many 2004 Holden Commodores can you buy with 1 btc?".center(175)     , 4500],
+#     ["How many pets goats could you buy with 1 bitcoin?".center(175)     , 180],
+#     ["How many packets of Tim Tams could you buy with 1 bitcoin".center(175)     , 3.65],
+#     ["How many Nintendo Switches can you buy with 1 bitcoin".center(175)     , 399 ]
+#     ]
 
-    system("clear")
+#     system("clear")
 
-    while !correct
-        number_of_items = ((blockchain.to_i)/questions[q_picker][1]).round
-        spacing
-        p questions[q_picker][0]
-        puts "\n"
-        answer = gets.to_i
-        iteration -=1
-        #  puts number_of_items
-        if iteration ==0
-            system("clear")
-            spacing
-            puts "You have no more guesses left".center(175)
-            puts " the correct answer was #{number_of_items}".center(175)
-            puts "\n"
-            play_again
-        elsif answer < number_of_items
-            puts "too low! Try again!".center(175)
-            puts "you have #{iteration} guesses left!".center(175)
-            puts "\n"
-        elsif answer > number_of_items
-            puts "too high! Try again".center(175)
-            puts "you have #{iteration} guesses left!".center(175)
-            puts "\n"
-        elsif answer == number_of_items
-            system("clear")
-            spacing
-            puts "You got it right!!".center(175)
-            puts "\n"
-            correct = true
-        else
-        puts "That's not a number, try again!".center(175)
-        end
-    end
-    play_again
-end
+#     while !correct
+#         number_of_items = ((blockchain.to_i)/questions[q_picker][1]).round
+#         spacing
+#         p questions[q_picker][0]
+#         puts "\n"
+#         answer = gets.to_i
+#         iteration -=1
+#         #  puts number_of_items
+#         if iteration ==0
+#             system("clear")
+#             spacing
+#             puts "You have no more guesses left".center(175)
+#             puts " the correct answer was #{number_of_items}".center(175)
+#             puts "\n"
+#             play_again
+#         elsif answer < number_of_items
+#             puts "too low! Try again!".center(175)
+#             puts "you have #{iteration} guesses left!".center(175)
+#             puts "\n"
+#         elsif answer > number_of_items
+#             puts "too high! Try again".center(175)
+#             puts "you have #{iteration} guesses left!".center(175)
+#             puts "\n"
+#         elsif answer == number_of_items
+#             system("clear")
+#             spacing
+#             puts "You got it right!!".center(175)
+#             puts "\n"
+#             correct = true
+#         else
+#         puts "That's not a number, try again!".center(175)
+#         end
+#     end
+#     play_again
+# end
 
 system("clear")
 

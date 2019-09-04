@@ -20,7 +20,7 @@ def play_again # asks if the user would like to play again
 
     elsif play_again_answer == "no"
         final_score
-        
+
     else 
         puts "I didn't understand that.".center(192).colorize(:light_red)
         puts "\n"
@@ -40,7 +40,7 @@ end
 # Pictures
 
 def picture_logo
-    Catpix::print_image "./images/one_bitcoin_logo.jpg",
+    Catpix::print_image "./images/one_bitcoin_logo_black.jpg",
         :limit_x => 0.65,
         :limit_y => 0,
         :center_x => true,
@@ -53,7 +53,7 @@ end
 def picture_you_lose
     system("clear")
     puts "\n"
-    Catpix::print_image "./images/bitcoin_fail.jpg",
+    Catpix::print_image "./images/bitcoin_fail_black.jpg",
         :limit_x => 0.4,
         :limit_y => 0,
         :center_x => true,
@@ -66,7 +66,7 @@ end
 def picture_you_win
     system("clear")
     puts "\n"
-    Catpix::print_image "./images/btc_thumb.jpg",
+    Catpix::print_image "./images/btc_thumb_black.jpg",
         :limit_x => 0.3,
         :limit_y => 0,
         :center_x => true,

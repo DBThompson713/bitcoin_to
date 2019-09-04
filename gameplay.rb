@@ -9,12 +9,12 @@ def gameplay
    
 # questions array - question, per unit cost, image relative path
     questions = [
-    ["How many Big Macs can you currently buy with 1 bitcoin?".center(185)                        , 5.5     , "images/objects/big_mac.jpg"],
+    ["How many Big Macs can you currently buy with 1 bitcoin?".center(185)                        , 5.5     , "images/objects/big_mac_black.jpg"],
     ["How many 2004 Holden Commodores can you currently buy with 1 bitcoin?".center(185)          , 4500    , "images/objects/commodore_black.jpg"],
     ["How many pets goats could you currently buy with 1 bitcoin?".center(185)                    , 180     , "images/objects/goat_black.jpg"],
-    ["How many packets of Tim Tams could you currently buy with 1 bitcoin".center(185)            , 3.65    , "images/objects/timtam.jpg"],
+    ["How many packets of Tim Tams could you currently buy with 1 bitcoin".center(185)            , 3.65    , "images/objects/timtam_black.jpg"],
     ["How many Iphone XRs could you currently buy with 1 bitcoin".center(187)                     , 1299    , "images/objects/iphone_black.jpg"],
-    ["How many months of Netflix basic could you get with 1 bitcoin".center(187)                  , 9.99    , "images/objects/netflix_proper.jpg"],
+    ["How many months of Netflix basic could you get with 1 bitcoin".center(187)                  , 9.99    , "images/objects/netflix_black.jpg"],
     ["How many footlong veggie delite subway sandwiches can you get with 1 bitcoin".center(185)   , 8.95    , "images/objects/veggie_delite_black.jpg"],
     ["How many Nintendo Switches can you currently buy with 1 bitcoin".center(188)                , 399     , "images/objects/switch_black.jpg"]
     ]

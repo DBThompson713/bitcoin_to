@@ -1,38 +1,34 @@
-# require_relative 'gameplay'
-
-def key_to_continue                                                                                                           
+def key_to_continue # press any key to start                                                                                                       
     print "Press any key to start!".center(175)                                                                                                 
     STDIN.getch                                                                                                              
     print "            \r"                                                                                                             
 end 
 
-def blockchain
+def blockchain # gets the current bitcoin value
     uri = URI('https://blockchain.info/ticker')
     json = JSON.parse(Net::HTTP.get(uri))
     json["AUD"]["last"]
 end
 
-def play_again
+def play_again # asks if the user would like to play again
     puts "Would you like to play again?".center(192)     
     puts "      Yes    or     No       ".center(192)     
     play_again_answer = gets.chomp.downcase
     
     if play_again_answer == "yes"
         gameplay  
+
     elsif play_again_answer == "no"
         final_score
+        
     else 
-        puts "I didn't understand that.".center(190).colorize(:light_red)
+        puts "I didn't understand that.".center(192).colorize(:light_red)
         puts "\n"
         play_again
     end
 end
 
-def spacing 
-    puts "\n" *3
-end
-
-def final_score
+def final_score # called when the player quits the game
     system("clear")
     puts "\n" *20
     puts "Your final score is #{$score}".center(175)
@@ -45,26 +41,26 @@ end
 
 def picture_logo
     Catpix::print_image "./images/one_bitcoin_logo.jpg",
-    :limit_x => 0.65,
-    :limit_y => 0,
-    :center_x => true,
-    :center_y => true,
-    :bg => "white",
-    :bg_fill => false,
-    :resolution => "high"
+        :limit_x => 0.65,
+        :limit_y => 0,
+        :center_x => true,
+        :center_y => true,
+        :bg => "white",
+        :bg_fill => false,
+        :resolution => "high"
 end
 
 def picture_you_lose
     system("clear")
     puts "\n"
     Catpix::print_image "./images/bitcoin_fail.jpg",
-    :limit_x => 0.4,
-    :limit_y => 0,
-    :center_x => true,
-    :center_y => false,
-    :bg => "black",
-    :bg_fill => false,
-    :resolution => "high"
+        :limit_x => 0.4,
+        :limit_y => 0,
+        :center_x => true,
+        :center_y => false,
+        :bg => "black",
+        :bg_fill => false,
+        :resolution => "high"
 end
 
 def picture_you_win
@@ -108,6 +104,7 @@ def picture_meter_low
         :resolution => "high"
     puts "\n"
 end
+
 def picture_meter_high
     system("clear")
     puts "\n"
@@ -121,6 +118,7 @@ def picture_meter_high
         :resolution => "high"
     puts "\n"
 end
+
 def picture_meter_very_high
     system("clear")
     puts "\n"

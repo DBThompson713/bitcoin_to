@@ -3,8 +3,8 @@ require 'json'
 require 'io/console' 
 require 'catpix'
 require 'colorize'
-require_relative './gameplay.rb'
-require_relative './methods.rb'
+require_relative './gameplay'
+require_relative './methods'
 
 system("clear")
 

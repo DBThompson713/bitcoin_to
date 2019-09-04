@@ -1,5 +1,5 @@
+# require_relative 'gameplay'
 
-# press any key to continue
 def key_to_continue                                                                                                           
     print "Press any key to start!".center(175)                                                                                                 
     STDIN.getch                                                                                                              
@@ -14,19 +14,13 @@ end
 
 def play_again
     puts "Would you like to play again?".center(192)     
-    puts "       Yes    or     No      ".center(192)     
+    puts "      Yes    or     No       ".center(192)     
     play_again_answer = gets.chomp.downcase
     
     if play_again_answer == "yes"
-        gameplay
-        
+        gameplay  
     elsif play_again_answer == "no"
-        system("clear")
-        puts "\n" *20
-        puts "Your final score is #{$score}".center(175)
-        STDIN.getch 
-        system("clear")
-        exit
+        final_score
     else 
         puts "I didn't understand that.".center(190).colorize(:light_red)
         puts "\n"
@@ -36,4 +30,107 @@ end
 
 def spacing 
     puts "\n" *3
+end
+
+def final_score
+    system("clear")
+    puts "\n" *20
+    puts "Your final score is #{$score}".center(175)
+    STDIN.getch 
+    system("clear")
+    exit
+end
+
+# Pictures
+
+def picture_logo
+    Catpix::print_image "./images/one_bitcoin_logo.jpg",
+    :limit_x => 0.65,
+    :limit_y => 0,
+    :center_x => true,
+    :center_y => true,
+    :bg => "white",
+    :bg_fill => false,
+    :resolution => "high"
+end
+
+def picture_you_lose
+    system("clear")
+    puts "\n"
+    Catpix::print_image "./images/bitcoin_fail.jpg",
+    :limit_x => 0.4,
+    :limit_y => 0,
+    :center_x => true,
+    :center_y => false,
+    :bg => "black",
+    :bg_fill => false,
+    :resolution => "high"
+end
+
+def picture_you_win
+    system("clear")
+    puts "\n"
+    Catpix::print_image "./images/btc_thumb.jpg",
+        :limit_x => 0.3,
+        :limit_y => 0,
+        :center_x => true,
+        :center_y => false,
+        :bg => "black",
+        :bg_fill => true,
+        :resolution => "high"
+    puts "\n"
+end
+
+def picture_meter_very_low
+    system("clear")
+    puts "\n"
+    Catpix::print_image "./images/meter/meter_very_low.jpg",
+        :limit_x => 0.4,
+        :limit_y => 0,
+        :center_x => true,
+        :center_y => false,
+        :bg => "black",
+        :bg_fill => false,
+        :resolution => "high"
+    puts "\n"           
+end
+
+def picture_meter_low
+    system("clear")
+    puts "\n"
+    Catpix::print_image "./images/meter/meter_low.jpg",
+        :limit_x => 0.4,
+        :limit_y => 0,
+        :center_x => true,
+        :center_y => false,
+        :bg => "black",
+        :bg_fill => false,
+        :resolution => "high"
+    puts "\n"
+end
+def picture_meter_high
+    system("clear")
+    puts "\n"
+    Catpix::print_image "./images/meter/meter_high.jpg",
+        :limit_x => 0.4,
+        :limit_y => 0,
+        :center_x => true,
+        :center_y => false,
+        :bg => "black",
+        :bg_fill => false,
+        :resolution => "high"
+    puts "\n"
+end
+def picture_meter_very_high
+    system("clear")
+    puts "\n"
+    Catpix::print_image "./images/meter/meter_very_high.jpg",
+        :limit_x => 0.4,
+        :limit_y => 0,
+        :center_x => true,
+        :center_y => false,
+        :bg => "black",
+        :bg_fill => false,
+        :resolution => "high"
+    puts "\n"
 end

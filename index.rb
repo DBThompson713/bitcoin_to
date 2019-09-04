@@ -8,14 +8,6 @@ require_relative './methods.rb'
 
 system("clear")
 
-Catpix::print_image "./images/one_bitcoin_logo.jpg",
-  :limit_x => 0.65,
-  :limit_y => 0,
-  :center_x => true,
-  :center_y => true,
-  :bg => "white",
-  :bg_fill => false,
-  :resolution => "high"
-
+picture_logo
 key_to_continue
 gameplay

@@ -12,7 +12,7 @@ end
 
 def play_again
     puts "Would you like to play again?".center(175)     
-    puts "       yes    or     no      ".center(175)     
+    puts "       Yes    or     No      ".center(175)     
     play_again_answer = gets.chomp.downcase
     
     if play_again_answer == "yes"
@@ -21,6 +21,8 @@ def play_again
     elsif play_again_answer == "no"
         exit
     else 
+        puts "I didn't understand that.".center(175)
+        puts "\n"
         play_again
     end
 end

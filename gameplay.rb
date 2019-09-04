@@ -1,12 +1,15 @@
 def gameplay
     correct = false
-    q_picker = rand(5)
+    q_picker = rand(8)
     iteration = 7
     questions = [
     ["How many Big Macs can you currently buy with 1 bitcoin?".center(182)     , 5.5,"images/objects/big_mac.jpg"],
     ["How many 2004 Holden Commodores can you currently buy with 1 bitcoin?".center(175)     , 4500,"images/objects/commodore.jpg"],
     ["How many pets goats could you currently buy with 1 bitcoin?".center(175)     , 180, "images/objects/new_goat.jpg"],
     ["How many packets of Tim Tams could you currently buy with 1 bitcoin".center(185)     , 3.65, "images/objects/timtam.jpg"],
+    ["How many Iphone XRs could you currently buy with 1 bitcoin".center(185)     , 1299, "images/objects/iphone.jpg"],
+    ["How many months of Netflix basis could you get with 1 bitcoin".center(185)     , 9.99, "images/objects/netflix.jpg"],
+    ["How many footlong veggie delite subway sandwiches can you get with 1 bitcoin".center(185)     , 8.95, "images/objects/veggie_delite.jpg"],
     ["How many Nintendo Switches can you currently buy with 1 bitcoin".center(175)     , 399, "images/objects/switch_prop.jpg" ]
     ]
 
@@ -36,12 +39,12 @@ def gameplay
             system("clear")
             spacing
             puts "You have no more guesses left".center(175)
-            puts " the correct answer was #{number_of_items}".center(175)
+            puts "The correct answer was #{number_of_items}".center(175)
             puts "\n"
             play_again
         elsif answer < number_of_items
             system("clear")
-            Catpix::print_image "./images/meter_low.png",
+            Catpix::print_image "./images//meter/meter_low.jpg",
             :limit_x => 0.4,
             :limit_y => 0,
             :center_x => true,
@@ -51,11 +54,11 @@ def gameplay
             :resolution => "high"
             puts "\n"
             puts ("#{answer}"+" is too low!".colorize(:red) + " Try again!").center(195)
-            puts "you have #{iteration} guesses left!".center(175)
+            puts "You have #{iteration} guesses left!".center(175)
             puts "\n"
         elsif answer > number_of_items
             system("clear")
-            Catpix::print_image "./images/meter_high.png",
+            Catpix::print_image "./images/meter/meter_high.jpg",
             :limit_x => 0.4,
             :limit_y => 0,
             :center_x => true,
@@ -66,7 +69,7 @@ def gameplay
 
             puts "\n"
             puts ("#{answer}"+" is too high!".colorize(:red) +" Try again").center(195)
-            puts "you have #{iteration} guesses left!".center(175)
+            puts "You have #{iteration} guesses left!".center(175)
             puts "\n"
         elsif answer == number_of_items
             system("clear")

@@ -1,5 +1,5 @@
 def key_to_continue                                                                                                           
-    print "press any key to start!".center(175)                                                                                                 
+    print "Press any key to start!".center(175)                                                                                                 
     STDIN.getch                                                                                                              
     print "            \r"                                                                                                             
 end 
@@ -19,6 +19,7 @@ def play_again
         gameplay
         
     elsif play_again_answer == "no"
+        system("clear")
         exit
     else 
         puts "I didn't understand that.".center(175)

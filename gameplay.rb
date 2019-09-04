@@ -37,6 +37,15 @@ def gameplay
         #  puts number_of_items
         if iteration ==0
             system("clear")
+            Catpix::print_image "./images/bitcoin_fail.jpg",
+                :limit_x => 0.4,
+                :limit_y => 0,
+                :center_x => true,
+                :center_y => false,
+                :bg => "black",
+                :bg_fill => false,
+                :resolution => "high"
+
             spacing
             puts "You have no more guesses left".center(175)
             puts "The correct answer was #{number_of_items}".center(175)

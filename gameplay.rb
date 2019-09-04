@@ -3,11 +3,11 @@ def gameplay
     q_picker = rand(5)
     iteration = 7
     questions = [
-    ["How many Big Macs can you currently buy with 1 bitcoin?".center(182)     , 5.5,"images/big_mac.jpg"],
-    ["How many 2004 Holden Commodores can you currently buy with 1 bitcoin?".center(175)     , 4500,"images/commodore.jpg"],
-    ["How many pets goats could you currently buy with 1 bitcoin?".center(175)     , 180, "images/new_goat.jpg"],
-    ["How many packets of Tim Tams could you currently buy with 1 bitcoin".center(185)     , 3.65, "images/timtam.jpg"],
-    ["How many Nintendo Switches can you currently buy with 1 bitcoin".center(175)     , 399, "images/switch_prop.jpg" ]
+    ["How many Big Macs can you currently buy with 1 bitcoin?".center(182)     , 5.5,"images/objects/big_mac.jpg"],
+    ["How many 2004 Holden Commodores can you currently buy with 1 bitcoin?".center(175)     , 4500,"images/objects/commodore.jpg"],
+    ["How many pets goats could you currently buy with 1 bitcoin?".center(175)     , 180, "images/objects/new_goat.jpg"],
+    ["How many packets of Tim Tams could you currently buy with 1 bitcoin".center(185)     , 3.65, "images/objects/timtam.jpg"],
+    ["How many Nintendo Switches can you currently buy with 1 bitcoin".center(175)     , 399, "images/objects/switch_prop.jpg" ]
     ]
 
     system("clear")

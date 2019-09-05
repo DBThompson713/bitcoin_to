@@ -1,6 +1,6 @@
 def key_to_continue # press any key to start                                                                                                       
-    print "Press any key to start!".center(175)                                                                                                 
-    STDIN.getch                                                                                                              
+    print "Press any key to continue!".center(190)                                                                                                 
+    STDIN.getch                                                                                                    
     print "            \r"                                                                                                             
 end 
 
@@ -124,6 +124,20 @@ def picture_meter_very_high
     puts "\n"
     Catpix::print_image "./images/meter/meter_very_high.jpg",
         :limit_x => 0.4,
+        :limit_y => 0,
+        :center_x => true,
+        :center_y => false,
+        :bg => "black",
+        :bg_fill => false,
+        :resolution => "high"
+    puts "\n"
+end
+
+def picture_grumpy_face
+    system("clear")
+    puts "\n"
+    Catpix::print_image "./images/grumpy_face_black.jpg",
+        :limit_x => 0.3,
         :limit_y => 0,
         :center_x => true,
         :center_y => false,

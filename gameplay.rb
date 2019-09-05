@@ -6,6 +6,7 @@ def gameplay
     correct = false
     q_picker = rand(10)
     iteration = 7
+    
    
 # questions array - question, per unit cost, image relative path
     questions = [
@@ -23,7 +24,6 @@ def gameplay
 
 # image print
     system("clear")
-    # image = questions[q_picker][2]
     puts "\n"
     Catpix::print_image questions[q_picker][2],
             :limit_x => 0.3,
@@ -41,13 +41,13 @@ def gameplay
         puts "\n" *2
         puts questions[q_picker][0]
         puts "\n"
-        answer = gets.to_i
+        answer_char_check = gets
+        answer = answer_char_check.to_i
         iteration -=1
-
+        
 # Start of answer checking logic
-        if iteration ==0
+        if iteration == 0
             picture_you_lose
-
             puts "You have no more guesses left".center(190)
             puts "The correct answer was #{number_of_items}.".center(190)
             puts "\n"
@@ -55,9 +55,31 @@ def gameplay
             puts "\n"
             play_again
 
+        elsif answer_char_check.count("a-zA-Z") > 0
+            system("clear")
+            puts "\n"
+            picture_grumpy_face
+            puts "That is not a number!".colorize(:light_red).center(205)
+            puts "\n" *2
+            puts "You have #{iteration} guesses left.".center(190)
+            puts "\n" *2
+            key_to_continue
+            system("clear")
+            object_image
+            
+            Catpix::print_image questions[q_picker][2],
+            :limit_x => 0.3,
+            :limit_y => 0,
+            :center_x => true,
+            :center_y => false,
+            :bg => "black",
+            :bg_fill => false,
+            :resolution => "high"
+
         elsif answer == 713
             break
-        elsif (answer+200) < number_of_items # way too low
+
+        elsif (answer+100).to_i < number_of_items # way too low
             picture_meter_very_low
             puts ("#{answer}"+" is way too low!".colorize(:light_red) + " Try again!").center(205)
             puts "You have #{iteration} guesses left!".center(190)
@@ -69,7 +91,7 @@ def gameplay
             puts "You have #{iteration} guesses left!".center(190)
             puts "\n"
 
-        elsif (answer-200) > number_of_items # way too high
+        elsif (answer-100).to_i > number_of_items # way too high
             picture_meter_very_high
             puts ("#{answer}"+" is way too high!".colorize(:light_red) +" Try again!").center(205)
             puts "You have #{iteration} guesses left!".center(190)

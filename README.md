@@ -1,7 +1,7 @@
 <h1>1 Bitcoin</h1>
 <p>Dale Thompson - September 2019</p>
 
-<p>  <a href = "https://github.com/DBThompson713/bitcoin_to">1 Bitcoin on Github</a>
+<p><a href = "https://github.com/DBThompson713/bitcoin_to">1 Bitcoin on Github</a>
 
 <br />
 <strong><h2>Statement of Purpose and Scope</h2></strong>
@@ -12,7 +12,6 @@
 <p>To a person on the outside of the bitcoin scene, it can be quite daunting to understand how bitcoin value changes and what the real world implications of those changes are. Staring at a graph, it can be hard to visualise the real world purchasing power of a bitcoin and how much it can vary, however if the value differs in a few moments by several iphones or Nintendo switches, it becomes much easier to equate the value of one bitcoin to the world around us.
 <p>The target audience for this game is fans of bitcoin, people curious about bitcoin, as well as masochists. One type of user will play this game when they want to flex on their knowledge of bitcoin and purchasing power. Another type of user will play this game as a way to sate their curiosity regarding the bitcoin market. The last type of user for this game is someone who like to look at 8-bit pictures and make wild guesses.
 
-<div>
 <br />
 <strong><h2>Features</h2></strong>
 <br />

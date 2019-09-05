@@ -4,13 +4,13 @@ $score = 0
 
 def gameplay
     correct = false
-    q_picker = rand(10)
+    q_picker = rand(11)
     iteration = 7
    
 # questions array - question, per unit cost, image relative path
     questions = [
-    ["How many Big Macs can you currently buy with 1 bitcoin?".center(185)                         , 5.5     , "images/objects/big_mac_black.jpg"],
-    ["How many 2004 Holden Commodores can you currently buy with 1 bitcoin?".center(185)           , 4500    , "images/objects/commodore_black.jpg"],
+    ["How many Big Macs can you currently buy with 1 bitcoin?".center(185)                         , 5.5     , "images/objects/big_mac_black.jpg"],   
+    ["How many 2004 Holden Commodores can you currently buy with 1 bitcoin?".center(185)           , 4500    , "images/objects/commodore_black.jpg"],  
     ["How many pets goats could you currently buy with 1 bitcoin?".center(185)                     , 180     , "images/objects/goat_black.jpg"],
     ["How many packets of Tim Tams could you currently buy with 1 bitcoin?".center(185)            , 3.65    , "images/objects/timtam_black.jpg"],
     ["How many Iphone XRs could you currently buy with 1 bitcoin?".center(187)                     , 1299    , "images/objects/iphone_black.jpg"],
@@ -18,6 +18,8 @@ def gameplay
     ["How many footlong veggie delite subway sandwiches can you get with 1 bitcoin?".center(185)   , 8.95    , "images/objects/veggie_delite_black.jpg"],
     ["How many return economy trips from Sydney to Cairns can you buy with 1 bitcoin?".center(185) , 550     , "images/objects/plane_black.jpg"],
     ["How many 2 litre bottles of Solo can you get with 1 bitcoin?".center(185)                    , 2.5     , "images/objects/solo_black.jpg"],
+    ["How many Caramello Koalas can you buy for 1 bitcoin?".center(185)                            , 0.75    , "images/objects/koala_black.jpg"],
+    ["How many Hoyts movie tickets can you buy with 1 bitcoin?".center(185)                        , 20      , "images/objects/hoyts_black.jpg"],   #10
     ["How many Nintendo Switches can you currently buy with 1 bitcoin?".center(188)                , 399     , "images/objects/switch_black.jpg"]
     ]
 

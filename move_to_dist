@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+mkdir dist
+
+cp  index.rb gameplay.rb methods.rb images -r  ./dist

@@ -1,17 +1,17 @@
 <h1>1 Bitcoin</h1>
 <p>Dale Thompson - September 2019</p>
-
+  
 <p>  <a href = "https://github.com/DBThompson713/bitcoin_to">1 Bitcoin on Github</a>
-
+  
 <br />
 <strong><h2>Statement of Purpose and Scope</h2></strong>
-
+  
 <p>1 Bitcoin is a guessing game based on the current bitcoin price. The game is essentially designed to be as frustrating and confusing as the bitcoin market can be. 
-
+  
 <p>1 Bitcoin asks the user to guess how many of a given item can be purchased for 1 bitcoin. It then takes the current value of 1 bitcoin and determines how many items can be purchased. The game then retakes and recalculates that value every time the user guesses. This causes the number that the user is trying to guess to fluctuate depending on the current volatility of the bitcoin market. The more volatile the market, the harder the game is to win. A correct answer may only be correct in that instance and have changed in the next. The game also intentionally keeps the user’s proximity to the correct answer somewhat vague and unclear to increase the level of frustration. 
 <p>To a person on the outside of the bitcoin scene, it can be quite daunting to understand how bitcoin value changes and what the real world implications of those changes are. Staring at a graph, it can be hard to visualise the real world purchasing power of a bitcoin and how much it can vary, however if the value differs in a few moments by several iphones or Nintendo switches, it becomes much easier to equate the value of one bitcoin to the world around us.
 <p>The target audience for this game is fans of bitcoin, people curious about bitcoin, as well as masochists. One type of user will play this game when they want to flex on their knowledge of bitcoin and purchasing power. Another type of user will play this game as a way to sate their curiosity regarding the bitcoin market. The last type of user for this game is someone who like to look at 8-bit pictures and make wild guesses.
-
+  
 <div>
 <br />
 <strong><h2>Features</h2></strong>
@@ -26,7 +26,7 @@
 <br />o	1 bitcoin utilizes the catpix ruby gem to line by line convert images to their low-res 8-bit equivalent
 <br />o	The image’s relative path is stored as a string located at index 2 of the questions array. That path is then dropped in as an argument to catpix.
 <br />
-
+  
 <p><strong>User input</strong><br />
 •	Takes the user input and compares it to the actual number of items purchasable with 1 bitcoin
 <br />o	Upon taking in the user input, first the input is checked to ensure that it is a number and not a string or single letter. The primary error handling is done at this point.
@@ -49,7 +49,7 @@ Session score
 <br />o	O Canada.
 </div>
 <br />
-
+  
 <strong><h2>User Interaction and Experience</h2></strong>
 •	The user can find the basic instructions on how to play by running the application from the command line and passing in the argument help
 •	If the user does not make use of the helpfile, the game is pretty easy to play. The questions are worded in a very straight forward way 
@@ -57,3 +57,4 @@ o	Ex. How many Harley Davidsons can you currently purchase with 1 bitcoin?
 •	The user enters their response as an integer.
 •	If the user enters something other than a number, the game will chastise the user, or ignore the answer and they will lose that guess. 
 •	The user input is verified as a number before any calculations are done, and handles any potential “error” which may be introduced by the user.
+  

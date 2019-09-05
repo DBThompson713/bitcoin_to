@@ -52,10 +52,14 @@ def gameplay
             puts "\n" *2
             puts questions[q_picker][0]
             puts "\n"
+
+           
             answer_char_check = gets
+            
             answer = answer_char_check.to_i
+            
             iteration -=1
-        
+                
 # Start of answer checking logic
         if answer_char_check.count("a-zA-Z") > 0
                 system("clear")

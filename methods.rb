@@ -1,3 +1,37 @@
+def help_info
+    system("clear")
+    puts "\n" * 4
+    puts "This game provides you with a random thing, then makes you guess how many of that thing".center(190)
+    puts "you can purchase for 1 bitcoin. Sounds simple right?".center(190)
+    puts "\n"
+    puts "As an added wrinkle, your purchasing power is directly tied to the current value of bitcoin.".center(190)
+    puts "As the value of bitcoin changes, so does the answer.".center(190)
+    puts "\n"
+    puts "To play the game:".center(190)
+    puts "\n"
+    puts "Pick a number.".center(190)
+    puts "\n"
+    puts "Not a letter. Not an emoji. Not your nose.".center(190)
+    puts "Only a number".center(190)
+
+    key_to_continue
+end
+
+def canada
+    Catpix::print_image "./images/canada_flag.jpg",
+        :limit_x => 0.75,
+        :limit_y => 0.95,
+        :center_x => true,
+        :center_y => false,
+        :bg => "black",
+        :bg_fill => false,
+        :resolution => "high"
+    puts "\n"
+
+    key_to_continue
+end
+
+
 def key_to_continue # press any key to start                                                                                                       
     print "Press any key to continue!".center(190)                                                                                                 
     STDIN.getch                                                                                                    

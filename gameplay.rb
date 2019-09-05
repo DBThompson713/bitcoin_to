@@ -19,21 +19,21 @@ def gameplay
     ["How many return economy trips from Sydney to Cairns can you buy with 1 bitcoin?".center(185) , 550     , "images/objects/plane_black.jpg"],
     ["How many 2 litre bottles of Solo can you get with 1 bitcoin?".center(185)                    , 2.5     , "images/objects/solo_black.jpg"],
     ["How many Caramello Koalas can you buy for 1 bitcoin?".center(185)                            , 0.75    , "images/objects/koala_black.jpg"],
-    ["How many Hoyts movie tickets can you buy with 1 bitcoin?".center(185)                        , 20      , "images/objects/hoyts_black.jpg"],   #10
+    ["How many Hoyts movie tickets can you buy with 1 bitcoin?".center(190)                        , 20      , "images/objects/hoyts_black.jpg"],   #10
     ["How many Nintendo Switches can you currently buy with 1 bitcoin?".center(188)                , 399     , "images/objects/switch_black.jpg"]
     ]
 
-# image print
+# object image print
     system("clear")
     puts "\n"
     Catpix::print_image questions[q_picker][2],
-            :limit_x => 0.3,
-            :limit_y => 0,
-            :center_x => true,
-            :center_y => false,
-            :bg => "black",
-            :bg_fill => false,
-            :resolution => "high"
+        :limit_x => 0.3,
+        :limit_y => 0,
+        :center_x => true,
+        :center_y => false,
+        :bg => "black",
+        :bg_fill => false,
+        :resolution => "high"
 
 # Start of game logic
     while !correct
@@ -55,7 +55,6 @@ def gameplay
             puts questions[q_picker][0]
             puts "\n"
 
-           
             answer_char_check = gets
             
             answer = answer_char_check.to_i

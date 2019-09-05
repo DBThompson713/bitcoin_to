@@ -8,7 +8,8 @@ require_relative './methods'
 
 system("clear")
 
-if ARGV[0] == "help"
+# ARGV 
+if ARGV[0] == "help" or ARGV[0] == "Help"
     help_info
 elsif ARGV[0] =="Canada" or ARGV[0] =="canada"
     canada
@@ -18,3 +19,4 @@ ARGV.clear
 picture_logo
 key_to_continue
 gameplay
+

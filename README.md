@@ -19,7 +19,7 @@
 <br />• catpix
 <br />• colorize
 <br />• rake
-<br />• colorize
+
 </div>
   
 <div>
@@ -90,6 +90,6 @@ Session score
 
 <a href="https://drive.google.com/file/d/1JLGcrtCDS8WVB2zUd0DFyGUFJsM-bpuQ/view?usp=sharing">flowchart: https://drive.google.com/file/d/1JLGcrtCDS8WVB2zUd0DFyGUFJsM-bpuQ/view?usp=sharing</a>
 
-![Flowchart](./images/one_bitcoin_flowchart.jpg)
+![Flowchart](./images/one_btc_flowchart.jpg)
 <br />
-Dale Thompson - September 2019 - Coderacademy Sydney
+<p>Dale Thompson - September 2019 - Coderacademy Sydney

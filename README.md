@@ -80,16 +80,37 @@ Session score
 <br />•	If the user enters something other than a number, the game will chastise the user, or ignore the answer and they will lose that guess. 
 <br />•	The user input is verified as a number before any calculations are done, and handles any potential “error” which may be introduced by the user.
 </div>
+<div>
+<h2>Screenshots</h2>
 
+![intro](./images/screenshots/one_bitcoin_1_p.jpg)
+
+![help](./images/screenshots/one_bitcoin_4_p.jpg)
+
+![gameplay 1](./images/screenshots/one_bitcoin_2_p.jpg)
+
+![Fgameplay 2](./images/screenshots/one_bitcoin_3_p.jpg)
+
+![game over screen](./images/screenshots/one_bitcoin_5_p.jpg)
+
+</div>
+<br />
+<div>
 <h2>Workflow - Trello Board</h2>
+<br />
 <a href="https://trello.com/b/O9kLyot3/bitcoin-to">Trello Board: https://trello.com/b/O9kLyot3/bitcoin-to</a>
 
-![Flowchart](./images/trello.jpg)
+![trello board](./images/trello.jpg)
 
+
+</div>
+<br />
+<div>
 <h2>Flow Chart</h2>
-
+<br />
 <a href="https://drive.google.com/file/d/1JLGcrtCDS8WVB2zUd0DFyGUFJsM-bpuQ/view?usp=sharing">flowchart: https://drive.google.com/file/d/1JLGcrtCDS8WVB2zUd0DFyGUFJsM-bpuQ/view?usp=sharing</a>
 
 ![Flowchart](./images/one_btc_flowchart.jpg)
 <br />
+</div>
 <p>Dale Thompson - September 2019 - Coderacademy Sydney

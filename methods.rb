@@ -1,29 +1,38 @@
 # help file
 
+# global variables
+$center = Rake.application.terminal_width
+$score = 0
+
+# help file ARGV
 def help_info
     system("clear")
     puts "\n" * 9
-    puts "1 bitcoin".center(190)
-    puts "A frutstrating bitcoin game".center(190).colorize(:light_red)
+    puts "1 bitcoin".center($center)
+    puts "A frustrating bitcoin game".center($center).colorize(:light_red)
     puts "\n" *3
     
-    puts "This game provides you with a random thing, such as a car or a chocolate bar, then asks you".center(190)
-    puts "to guess how many of that thing you can purchase for 1 bitcoin. Sounds simple right?".center(190)
+    puts "This game provides you with a random thing, such as a car or a chocolate bar, then asks you".center($center)
+    puts "to guess how many of that thing you can purchase for 1 bitcoin. Sounds simple right?".center($center)
     puts "\n"
-    puts "As an added wrinkle, your purchasing power is directly tied to the current value of bitcoin.".center(190)
-    puts "As the value of bitcoin changes, so does the correct answer.".center(190)
+    puts "As an added wrinkle, your purchasing power is directly tied to the current value of bitcoin.".center($center)
+    puts "As the value of bitcoin changes, so does the correct answer.".center($center)
     puts "\n" *2
-    puts "-----------------------------------------------------------------".center(190).colorize(:light_grey)
+    puts "PS. This game is completely satire. 1 Bitcoin is meant to poke fun, not make a statement.".center($center)
     puts "\n" *2
-    puts "To play the game:".center(190)
+    puts "-----------------------------------------------------------------".center($center).colorize(:yellow)
+    puts "\n" *2
+    puts "To play the game:".center($center)
     puts "\n"
-    puts "Pick a number.".center(190)
+    puts "Pick a number.".center($center)
     puts "\n"
-    puts "Not a letter. Not an emoji. Not your nose.".center(190).colorize(:light_red)
-    puts "Only a number".center(190)
+    puts "Not a letter. Not an emoji. Not your nose.".center($center).colorize(:light_red)
+    puts "Only a number".center($center)
     puts "\n"*2
-    puts "If you're correct, you get a thumbs up! If you're too low or too high, the fail meter will let you know".center(190)
-    puts "\n"*10
+    puts "If you're correct, you get a thumbs up! If you're too low or too high, the fail meter will let you know.".center($center)
+    puts "the text will be automatically centered once the game runs. However, if you change the terminal size while".center($center)
+    puts "the text will no longer be center aligned".center($center)
+    puts "\n"*3
     key_to_continue
 end
 
@@ -31,7 +40,7 @@ end
 # gameplay methods
 
 def key_to_continue                                                            # press any key to start                                                                                                       
-    print "Press any key to continue!".center(190)                                                                                                 
+    print "Press any key to continue!".center($center)                                                                                                 
     STDIN.getch                                                                                                    
     print "            \r"                                                                                                             
 end 
@@ -43,15 +52,15 @@ def blockchain                                                                 #
 end
 
 def play_again                                                                 # asks if the user would like to play again
-    puts "Would you like to play again?".center(192)     
-    puts "      Yes    or     No       ".center(192)     
+    puts "Would you like to play again?".center($center)     
+    puts "      Yes    or     No       ".center($center)     
     play_again_answer = gets.chomp.downcase
     if play_again_answer == "yes"
         gameplay  
     elsif play_again_answer == "no"
         final_score
     else 
-        puts "I didn't understand that.".center(192).colorize(:light_red)
+        puts "I didn't understand that.".center($center).colorize(:light_red)
         puts "\n"
         play_again
     end
@@ -60,7 +69,7 @@ end
 def final_score                                                                 # Displays score when the player quits the game
     system("clear")
     puts "\n" *20
-    puts "Your final score is #{$score}".center(175)
+    puts "Your final score is #{$score}".center($center)
     STDIN.getch 
     system("clear")
     exit

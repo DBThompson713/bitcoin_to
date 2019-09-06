@@ -3,6 +3,7 @@ require 'json'
 require 'io/console' 
 require 'catpix'
 require 'colorize'
+require 'rake'
 require_relative './gameplay'
 require_relative './methods'
 
